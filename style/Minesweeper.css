@@ -1,0 +1,92 @@
+body{
+  color: blue;
+  margin: 0;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 40pt;
+}
+
+#gameWrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+}
+
+#statusBar{
+  display: flex;
+}
+
+#statusBar > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#statusBar > div > * {
+  flex: 1;
+  align-items: center;
+}
+
+#game_area {
+  width: 800px;
+  height: 800px;
+}
+
+#game_area > #gameElems > g > .infoText{
+   /* Prevent Drag Select */
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;
+  user-select: none;
+
+
+  /* stroke: blue; */
+  font-size: 10px;
+  pointer-events: none;
+  text-anchor: middle;
+  dominant-baseline: mathematical;
+}
+
+#game_area > #gameElems > g > .hiddenCell {
+  fill: rgb(170, 170, 170);
+  stroke: black;
+}
+
+#game_area > #gameElems > g > .exploredCell {
+  fill: rgb(110, 110, 110);
+  stroke: black;
+}
+
+#game_area > #gameElems > g > .explodedCell {
+  fill: rgb(150, 0, 0);
+  stroke: black;
+}
+
+#game_area > #gameElems > g > .flaggedCell {
+  fill: rgb(19, 82, 3);
+  stroke: black;
+}
+
+#game_area > #gameElems > g > .hiddenCell:hover{
+  fill: rgb(178, 254, 109);
+  stroke: black;
+}
+
+#smileySvg {
+  width: 50px;
+  height: 50px;
+}
+
+#smileyBtn{
+  padding: 1px;
+  border: 2px solid grey;
+}
